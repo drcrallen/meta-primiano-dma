@@ -1,7 +1,7 @@
 From 7c8b9d054523b16a1a7cd67d165d1e6b0c4ad2e7 Mon Sep 17 00:00:00 2001
 From: Primiano Tucci <p.tucci@gmail.com>
 Date: Mon, 6 Jul 2015 23:03:55 +0000
-Subject: [PATCH 3/3] Enable SPI DMA on Intel Edison
+Subject: [PATCH 4/4] Enable SPI DMA on Intel Edison
 
 Tested in a lab with an oscilloscope.
 Reach 25 MHz of continuous streaming.

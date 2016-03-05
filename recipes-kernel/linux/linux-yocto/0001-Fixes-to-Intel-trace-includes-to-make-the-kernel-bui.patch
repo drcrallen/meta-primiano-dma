@@ -1,0 +1,52 @@
+From 5870627067817176a3ec1b23f10bae082a5ecb9b Mon Sep 17 00:00:00 2001
+From: Primiano Tucci <p.tucci@gmail.com>
+Date: Sun, 5 Jul 2015 09:10:49 +0000
+Subject: [PATCH 1/4] Fixes to Intel trace includes to make the kernel
+ buildable
+
+The weird trace file include pattern doesn't make the kernel buildable
+outside of yocto.
+---
+ .gitignore                      | 3 +++
+ drivers/tty/serial/mfd_trace.h  | 2 +-
+ sound/soc/intel/sst/sst_trace.h | 2 +-
+ 3 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/.gitignore b/.gitignore
+index 3557999..f0b4157 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -91,3 +91,6 @@ extra_certificates
+ signing_key.priv
+ signing_key.x509
+ x509.genkey
++
++fs/aufs/conf.str
++fs/aufs/conf.str.tmp
+diff --git a/drivers/tty/serial/mfd_trace.h b/drivers/tty/serial/mfd_trace.h
+index 49afd9b..b4c643c 100644
+--- a/drivers/tty/serial/mfd_trace.h
++++ b/drivers/tty/serial/mfd_trace.h
+@@ -1,6 +1,6 @@
+ #undef TRACE_INCLUDE_PATH
+ #undef TRACE_INCLUDE_FILE
+-#define TRACE_INCLUDE_PATH .
++#define TRACE_INCLUDE_PATH ../../drivers/tty/serial
+ #define TRACE_INCLUDE_FILE mfd_trace
+ 
+ #define TRACE_SYSTEM hsu
+diff --git a/sound/soc/intel/sst/sst_trace.h b/sound/soc/intel/sst/sst_trace.h
+index 8d34ef3..574d9c6 100644
+--- a/sound/soc/intel/sst/sst_trace.h
++++ b/sound/soc/intel/sst/sst_trace.h
+@@ -142,6 +142,6 @@ TRACE_EVENT(sst_fw_download,
+ 
+ /* This part must be outside protection */
+ #undef TRACE_INCLUDE_PATH
+-#define TRACE_INCLUDE_PATH .
++#define TRACE_INCLUDE_PATH ../../sound/soc/intel/sst
+ #define TRACE_INCLUDE_FILE sst_trace
+ #include <trace/define_trace.h>
+-- 
+1.8.3.1
+

@@ -1,7 +1,7 @@
 From ec02b8b09549fd643fa4f81f5ccb69b7b20dcb1d Mon Sep 17 00:00:00 2001
 From: Jakub Kramarz <jkramarz@virtuslab.com>
 Date: Tue, 16 Jun 2015 12:37:29 +0200
-Subject: [PATCH 1/3] applied patch from "DOOM on Edison with adafruit2.8 TFT"
+Subject: [PATCH 2/4] applied patch from "DOOM on Edison with adafruit2.8 TFT"
 
 ---
  configs/defconfig                     | 3777 +++++++++++++++++++++++++++++++++

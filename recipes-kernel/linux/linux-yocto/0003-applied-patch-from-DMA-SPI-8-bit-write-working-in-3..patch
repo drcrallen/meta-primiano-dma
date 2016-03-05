@@ -1,7 +1,7 @@
 From 4f9688e806a673dd90dbdaecb707ad5b30fbdeee Mon Sep 17 00:00:00 2001
 From: Jakub Kramarz <jkramarz@virtuslab.com>
 Date: Tue, 16 Jun 2015 13:32:33 +0200
-Subject: [PATCH 2/3] applied patch from "DMA SPI 8 bit write working in
+Subject: [PATCH 3/4] applied patch from "DMA SPI 8 bit write working in
  3.10.17"
 
 ---
