@@ -11,6 +11,6 @@ Applying this patch set involves building an image. This patch set is known to w
 1. If you have NEVER built the image before, build the image at least once following https://software.intel.com/en-us/node/593591
 1. Prepare a clean state for the kernel build with `bitbake -c cleansstate linux-yocto`
 1. Build the kernel with `bitbake -k linux-yocto` (see https://software.intel.com/sites/default/files/m/4/d/8/5/8/42868-11__Developing_Kernel_Module_on_Yocto.pdf )
-1. Re-build the kernen into the image with `bitbake edison-image`
+1. Re-build the kernel into the image with `bitbake edison-image`
 1. For your own sanity package the needed files in a clean zip with `../meta-intel-edison/utils/flash/postBuild.sh`
 1. Flash the fresh package to your edison
