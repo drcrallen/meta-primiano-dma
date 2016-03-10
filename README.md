@@ -1,6 +1,6 @@
 meta-primiano-dma
 ---------------------
-Bitbake recipes for @primiano's dma patch set
+Bitbake recipes for @primiano's dma patch set from https://communities.intel.com/thread/76768
 
 # Applying patch set
 Applying this patch set involves building an image. This patch set is known to work against the 1.6.2 poky distribution of the edison (v2.1)
